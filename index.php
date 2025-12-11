@@ -11,7 +11,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1">
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
         <title>Login</title>
     </head>
     <body>
@@ -19,8 +19,7 @@
 
             <h1>Login</h1>
 
-            <form action="auth.php" method="post" class="form login-form">
-
+            <form action="includes/auth_login.php" method="post" class="form login-form">
                 <label class="form-label" for="username">Username</label>
                 <div class="form-group">
                     <input class="form-input" type="text" name="username" placeholder="Username" id="username" required>

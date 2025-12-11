@@ -1,9 +1,5 @@
 <?php
-    $con = mysqli_connect('localhost', 'nico', 'bdpass', 'saw');
-
-    if (mysqli_connect_errno()) {
-        exit('Connessione a MySQL fallita: ' . mysqli_connect_error());
-    }
+    require 'config.php';
 
     if (!isset($_POST['username'], $_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['confirm_password'])) {
         exit('Inserisci tutti i dati richiesti!');
@@ -32,7 +28,7 @@
             	$stmt->bind_param('sssss', $username, $name, $surname, $email, $password);
             	$stmt->execute();
             	
-            	echo 'Registrazione completata con successo! Puoi ora fare il <a href="index.php">Login</a>.';
+            	echo 'Registrazione completata con successo! Puoi ora fare il <a href="../index.php">Login</a>.';
             } else {
             	echo 'Impossibile comunicare con il database durante la registrazione.';
             }

@@ -12,7 +12,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1">
         <title>Home</title>
-        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
@@ -22,6 +22,7 @@
 
                 <nav class="menu">
                     <a href="home.php">Home</a>
+                    <a href="game.php">Gioca</a> 
                     <a href="profile.php">Profilo</a>
                     <a href="logout.php">Logout</a>
                 </nav>

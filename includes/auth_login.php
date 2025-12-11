@@ -1,11 +1,7 @@
 <?php
     session_start();
 
-    $con = mysqli_connect('localhost', 'nico', 'bdpass', 'saw');
- 
-    if (mysqli_connect_errno()) {
-        exit('Connessione a MySQL fallita: ' . mysqli_connect_error);
-    }
+    require 'config.php';
 
     if (!isset($_POST['username'], $_POST['password'])) {
         exit('Inserisci sia Username che Password!');
@@ -30,7 +26,7 @@
                 $_SESSION['surname'] = $surname;
                 $_SESSION['email'] = $email;
                 $_SESSION['registration'] = $registration;
-                header('Location: home.php');
+                header('Location: ../home.php');
             } else {
                 echo 'Username e/o Password incorretti.';
             }
